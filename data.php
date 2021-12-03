@@ -2,6 +2,11 @@
 //connect to database
 $mysqli = new mysqli("localhost","dbname","dbpass","tablename");
 
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
+}
+
 $id = $_REQUEST['id'];
 
 $arr 	= array();
