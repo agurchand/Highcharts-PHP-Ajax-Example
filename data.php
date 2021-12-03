@@ -1,6 +1,7 @@
 <?php
 //connect to database
-include('../db_con.php');
+$mysqli = new mysqli("localhost","dbname","dbpass","tablename");
+
 $id = $_REQUEST['id'];
 
 $arr 	= array();
